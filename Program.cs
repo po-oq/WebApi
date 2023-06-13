@@ -1,5 +1,8 @@
 // 依存関係の挿入
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using System.Text.Encodings.Web;
 using WebApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,8 +24,8 @@ if (app.Environment.IsDevelopment())
     // アプリケーションの開発中にエラーが発生した場合に、開発者にエラーの詳細情報を提供する
     // 本番環境では無効にすることが推奨
     app.UseDeveloperExceptionPage();
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
