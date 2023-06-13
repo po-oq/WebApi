@@ -16,7 +16,7 @@ namespace WebApi.Controllers
             _repository = repository;
         }
 
-        // GET: api/TodoItems1
+        // GET: api/TodoItemsUseRepo
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
@@ -28,7 +28,7 @@ namespace WebApi.Controllers
             return result.ToList();
         }
 
-        // GET: api/TodoItems1/5
+        // GET: api/TodoItemsUseRepo/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TodoItem>> GetTodoItem(long id)
         {
@@ -41,7 +41,7 @@ namespace WebApi.Controllers
             return todoItem;
         }
 
-        // PUT: api/TodoItems1/5
+        // PUT: api/TodoItemsUseRepo/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTodoItem(long id, TodoItem todoItem)
@@ -57,7 +57,7 @@ namespace WebApi.Controllers
             }
         }
 
-        // POST: api/TodoItems1
+        // POST: api/TodoItemsUseRepo
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<TodoItem>> PostTodoItem(TodoItem todoItem)
@@ -73,7 +73,7 @@ namespace WebApi.Controllers
             }
         }
 
-        // DELETE: api/TodoItems1/5
+        // DELETE: api/TodoItemsUseRepo/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTodoItem(long id)
         {
